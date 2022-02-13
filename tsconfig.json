@@ -28,6 +28,6 @@
       }
     ]
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/views/todo-views.js"],
   "exclude": []
 }

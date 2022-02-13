@@ -1,9 +1,3 @@
-/**
- * @license
- * Copyright 2021 Google LLC
- * SPDX-License-Identifier: BSD-3-Clause
- */
-
 import {App} from '../app.js';
 
 import {fixture, assert} from '@open-wc/testing';
@@ -20,7 +14,7 @@ suite('my-app', () => {
     assert.shadowDom.equal(
       el,
       `
-      <h1>Hello, World!</h1>
+      <h1>Hello, FED21G!</h1>
       <button part="button">Click Count: 0</button>
       <slot></slot>
     `
@@ -47,7 +41,7 @@ suite('my-app', () => {
     assert.shadowDom.equal(
       el,
       `
-      <h1>Hello, World!</h1>
+      <h1>Hello, FED21G!</h1>
       <button part="button">Click Count: 1</button>
       <slot></slot>
     `
