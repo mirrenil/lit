@@ -43,7 +43,7 @@ export class App extends LitElement {
     this.count++;
     this.dispatchEvent(new CustomEvent('count-changed'));
   }
-
+// säger hej till namnet som @property tog emot
   sayHello(name: string): string {
     return `Hello, ${name}`;
   }
