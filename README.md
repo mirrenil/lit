@@ -25,4 +25,5 @@ There is a development HTML file located at `/dev/index.html` that you can view 
 ## Please note:
 
 The site will usually be served at http://localhost:8000.
+You may have to click on the link to enter the developer mode.
 

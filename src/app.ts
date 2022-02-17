@@ -32,7 +32,6 @@ export class App extends LitElement {
   override render() {
     return html`
       <h1>${this.sayHello(this.name)}!</h1>
-      // Event listeners
       <button @click=${this._onClick} part="button">
         Du har klickat ${this.count} gång/er
       </button>
@@ -43,7 +42,7 @@ export class App extends LitElement {
     this.count++;
     this.dispatchEvent(new CustomEvent('count-changed'));
   }
-// säger hej till namnet som @property tog emot
+  // säger hej till namnet som @property tog emot
   sayHello(name: string): string {
     return `Hello, ${name}`;
   }
