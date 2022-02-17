@@ -5,38 +5,40 @@ import {customElement, property} from 'lit/decorators.js';
 export class App extends LitElement {
   static override styles = css`
     :host {
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       border: solid 1px grey;
-      background-color: rebeccapurple;
+      background-color: darkblue;
       color: white;
       padding: 30px;
       max-width: 400px;
     }
     button {
-      background-color: orange;
-      color: white;
+      background-color: lightblue;
+      color: grey;
       border-radius: 5rem;
       font-size: 1.5rem;
       padding: 1rem;
     }
   `;
-
+  //@property renderar om när den har fått en input
   @property()
   name = 'FED21G';
-
+  //@property gör att man inte behöver kalla på render, sidan renderas automatiskt!
   @property({type: Number})
   count = 0;
 
   override render() {
     return html`
       <h1>${this.sayHello(this.name)}!</h1>
+      // Event listeners
       <button @click=${this._onClick} part="button">
-        Click Count: ${this.count}
+        Du har klickat ${this.count} gång/er
       </button>
-      <slot></slot>
     `;
   }
-
+  // plussar countern varje gång man klickar
   private _onClick() {
     this.count++;
     this.dispatchEvent(new CustomEvent('count-changed'));
